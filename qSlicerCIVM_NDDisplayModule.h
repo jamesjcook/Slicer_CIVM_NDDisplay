@@ -15,19 +15,19 @@
 
 ==============================================================================*/
 
-#ifndef __qSlicerLoadableModuleTemplateModule_h
-#define __qSlicerLoadableModuleTemplateModule_h
+#ifndef __qSlicerCIVM_NDDisplayModule_h
+#define __qSlicerCIVM_NDDisplayModule_h
 
 // SlicerQt includes
 #include "qSlicerLoadableModule.h"
 
-#include "qSlicerLoadableModuleTemplateModuleExport.h"
+#include "qSlicerCIVM_NDDisplayModuleExport.h"
 
-class qSlicerLoadableModuleTemplateModulePrivate;
+class qSlicerCIVM_NDDisplayModulePrivate;
 
 /// \ingroup Slicer_QtModules_ExtensionTemplate
-class Q_SLICER_QTMODULES_LOADABLEMODULETEMPLATE_EXPORT
-qSlicerLoadableModuleTemplateModule
+class Q_SLICER_QTMODULES_CIVM_NDDISPLAY_EXPORT
+qSlicerCIVM_NDDisplayModule
   : public qSlicerLoadableModule
 {
   Q_OBJECT
@@ -36,8 +36,8 @@ qSlicerLoadableModuleTemplateModule
 public:
 
   typedef qSlicerLoadableModule Superclass;
-  explicit qSlicerLoadableModuleTemplateModule(QObject *parent=0);
-  virtual ~qSlicerLoadableModuleTemplateModule();
+  explicit qSlicerCIVM_NDDisplayModule(QObject *parent=0);
+  virtual ~qSlicerCIVM_NDDisplayModule();
 
   qSlicerGetTitleMacro(QTMODULE_TITLE);
 
@@ -62,11 +62,11 @@ protected:
   virtual vtkMRMLAbstractLogic* createLogic();
 
 protected:
-  QScopedPointer<qSlicerLoadableModuleTemplateModulePrivate> d_ptr;
+  QScopedPointer<qSlicerCIVM_NDDisplayModulePrivate> d_ptr;
 
 private:
-  Q_DECLARE_PRIVATE(qSlicerLoadableModuleTemplateModule);
-  Q_DISABLE_COPY(qSlicerLoadableModuleTemplateModule);
+  Q_DECLARE_PRIVATE(qSlicerCIVM_NDDisplayModule);
+  Q_DISABLE_COPY(qSlicerCIVM_NDDisplayModule);
 
 };
 

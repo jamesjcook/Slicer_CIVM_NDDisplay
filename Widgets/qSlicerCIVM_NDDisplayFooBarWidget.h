@@ -18,35 +18,35 @@
 
 ==============================================================================*/
 
-#ifndef __qSlicerLoadableModuleTemplateFooBarWidget_h
-#define __qSlicerLoadableModuleTemplateFooBarWidget_h
+#ifndef __qSlicerCIVM_NDDisplayFooBarWidget_h
+#define __qSlicerCIVM_NDDisplayFooBarWidget_h
 
 // Qt includes
 #include <QWidget>
 
 // FooBar Widgets includes
-#include "qSlicerLoadableModuleTemplateModuleWidgetsExport.h"
+#include "qSlicerCIVM_NDDisplayModuleWidgetsExport.h"
 
-class qSlicerLoadableModuleTemplateFooBarWidgetPrivate;
+class qSlicerCIVM_NDDisplayFooBarWidgetPrivate;
 
-/// \ingroup Slicer_QtModules_LoadableModuleTemplate
-class Q_SLICER_MODULE_LOADABLEMODULETEMPLATE_WIDGETS_EXPORT qSlicerLoadableModuleTemplateFooBarWidget
+/// \ingroup Slicer_QtModules_CIVM_NDDisplay
+class Q_SLICER_MODULE_CIVM_NDDISPLAY_WIDGETS_EXPORT qSlicerCIVM_NDDisplayFooBarWidget
   : public QWidget
 {
   Q_OBJECT
 public:
   typedef QWidget Superclass;
-  qSlicerLoadableModuleTemplateFooBarWidget(QWidget *parent=0);
-  virtual ~qSlicerLoadableModuleTemplateFooBarWidget();
+  qSlicerCIVM_NDDisplayFooBarWidget(QWidget *parent=0);
+  virtual ~qSlicerCIVM_NDDisplayFooBarWidget();
 
 protected slots:
 
 protected:
-  QScopedPointer<qSlicerLoadableModuleTemplateFooBarWidgetPrivate> d_ptr;
+  QScopedPointer<qSlicerCIVM_NDDisplayFooBarWidgetPrivate> d_ptr;
 
 private:
-  Q_DECLARE_PRIVATE(qSlicerLoadableModuleTemplateFooBarWidget);
-  Q_DISABLE_COPY(qSlicerLoadableModuleTemplateFooBarWidget);
+  Q_DECLARE_PRIVATE(qSlicerCIVM_NDDisplayFooBarWidget);
+  Q_DISABLE_COPY(qSlicerCIVM_NDDisplayFooBarWidget);
 };
 
 #endif

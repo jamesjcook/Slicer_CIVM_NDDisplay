@@ -15,8 +15,8 @@
 
 ==============================================================================*/
 
-// LoadableModuleTemplate Logic includes
-#include "vtkSlicerLoadableModuleTemplateLogic.h"
+// CIVM_NDDisplay Logic includes
+#include "vtkSlicerCIVM_NDDisplayLogic.h"
 
 // MRML includes
 #include <vtkMRMLScene.h>
@@ -30,26 +30,26 @@
 #include <cassert>
 
 //----------------------------------------------------------------------------
-vtkStandardNewMacro(vtkSlicerLoadableModuleTemplateLogic);
+vtkStandardNewMacro(vtkSlicerCIVM_NDDisplayLogic);
 
 //----------------------------------------------------------------------------
-vtkSlicerLoadableModuleTemplateLogic::vtkSlicerLoadableModuleTemplateLogic()
+vtkSlicerCIVM_NDDisplayLogic::vtkSlicerCIVM_NDDisplayLogic()
 {
 }
 
 //----------------------------------------------------------------------------
-vtkSlicerLoadableModuleTemplateLogic::~vtkSlicerLoadableModuleTemplateLogic()
+vtkSlicerCIVM_NDDisplayLogic::~vtkSlicerCIVM_NDDisplayLogic()
 {
 }
 
 //----------------------------------------------------------------------------
-void vtkSlicerLoadableModuleTemplateLogic::PrintSelf(ostream& os, vtkIndent indent)
+void vtkSlicerCIVM_NDDisplayLogic::PrintSelf(ostream& os, vtkIndent indent)
 {
   this->Superclass::PrintSelf(os, indent);
 }
 
 //---------------------------------------------------------------------------
-void vtkSlicerLoadableModuleTemplateLogic::SetMRMLSceneInternal(vtkMRMLScene * newScene)
+void vtkSlicerCIVM_NDDisplayLogic::SetMRMLSceneInternal(vtkMRMLScene * newScene)
 {
   vtkNew<vtkIntArray> events;
   events->InsertNextValue(vtkMRMLScene::NodeAddedEvent);
@@ -59,25 +59,25 @@ void vtkSlicerLoadableModuleTemplateLogic::SetMRMLSceneInternal(vtkMRMLScene * n
 }
 
 //-----------------------------------------------------------------------------
-void vtkSlicerLoadableModuleTemplateLogic::RegisterNodes()
+void vtkSlicerCIVM_NDDisplayLogic::RegisterNodes()
 {
   assert(this->GetMRMLScene() != 0);
 }
 
 //---------------------------------------------------------------------------
-void vtkSlicerLoadableModuleTemplateLogic::UpdateFromMRMLScene()
+void vtkSlicerCIVM_NDDisplayLogic::UpdateFromMRMLScene()
 {
   assert(this->GetMRMLScene() != 0);
 }
 
 //---------------------------------------------------------------------------
-void vtkSlicerLoadableModuleTemplateLogic
+void vtkSlicerCIVM_NDDisplayLogic
 ::OnMRMLSceneNodeAdded(vtkMRMLNode* vtkNotUsed(node))
 {
 }
 
 //---------------------------------------------------------------------------
-void vtkSlicerLoadableModuleTemplateLogic
+void vtkSlicerCIVM_NDDisplayLogic
 ::OnMRMLSceneNodeRemoved(vtkMRMLNode* vtkNotUsed(node))
 {
 }

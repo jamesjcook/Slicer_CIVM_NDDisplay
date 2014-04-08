@@ -2,6 +2,11 @@ project(qSlicer${MODULE_NAME}ModuleWidgets)
 
 set(KIT ${PROJECT_NAME})
 
+#-----------------------------------------------------------------------------
+add_subdirectory(ThreeD)
+add_subdirectory(FourD)
+#add_subdirectory(FiveD)
+
 set(${KIT}_EXPORT_DIRECTIVE "Q_SLICER_MODULE_${MODULE_NAME_UPPER}_WIDGETS_EXPORT")
 
 set(${KIT}_INCLUDE_DIRECTORIES

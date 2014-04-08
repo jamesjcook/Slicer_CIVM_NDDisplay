@@ -19,45 +19,47 @@
 #include <QDebug>
 
 // SlicerQt includes
-#include "qSlicerLoadableModuleTemplateModuleWidget.h"
-#include "ui_qSlicerLoadableModuleTemplateModuleWidget.h"
+#include "qSlicerCIVM_NDDisplayModuleWidget.h"
+#include "ui_qSlicerCIVM_NDDisplayModuleWidget.h"
+#include "qSlicerCIVM_NDDisplayFooBarWidget.h"
 
 //-----------------------------------------------------------------------------
 /// \ingroup Slicer_QtModules_ExtensionTemplate
-class qSlicerLoadableModuleTemplateModuleWidgetPrivate: public Ui_qSlicerLoadableModuleTemplateModuleWidget
+class qSlicerCIVM_NDDisplayModuleWidgetPrivate: public Ui_qSlicerCIVM_NDDisplayModuleWidget
 {
 public:
-  qSlicerLoadableModuleTemplateModuleWidgetPrivate();
+  qSlicerCIVM_NDDisplayModuleWidgetPrivate();
 };
 
 //-----------------------------------------------------------------------------
-// qSlicerLoadableModuleTemplateModuleWidgetPrivate methods
+// qSlicerCIVM_NDDisplayModuleWidgetPrivate methods
 
 //-----------------------------------------------------------------------------
-qSlicerLoadableModuleTemplateModuleWidgetPrivate::qSlicerLoadableModuleTemplateModuleWidgetPrivate()
+qSlicerCIVM_NDDisplayModuleWidgetPrivate::qSlicerCIVM_NDDisplayModuleWidgetPrivate()
 {
 }
 
 //-----------------------------------------------------------------------------
-// qSlicerLoadableModuleTemplateModuleWidget methods
+// qSlicerCIVM_NDDisplayModuleWidget methods
 
 //-----------------------------------------------------------------------------
-qSlicerLoadableModuleTemplateModuleWidget::qSlicerLoadableModuleTemplateModuleWidget(QWidget* _parent)
+qSlicerCIVM_NDDisplayModuleWidget::qSlicerCIVM_NDDisplayModuleWidget(QWidget* _parent)
   : Superclass( _parent )
-  , d_ptr( new qSlicerLoadableModuleTemplateModuleWidgetPrivate )
+  , d_ptr( new qSlicerCIVM_NDDisplayModuleWidgetPrivate )
 {
 }
 
 //-----------------------------------------------------------------------------
-qSlicerLoadableModuleTemplateModuleWidget::~qSlicerLoadableModuleTemplateModuleWidget()
+qSlicerCIVM_NDDisplayModuleWidget::~qSlicerCIVM_NDDisplayModuleWidget()
 {
 }
 
 //-----------------------------------------------------------------------------
-void qSlicerLoadableModuleTemplateModuleWidget::setup()
+void qSlicerCIVM_NDDisplayModuleWidget::setup()
 {
-  Q_D(qSlicerLoadableModuleTemplateModuleWidget);
+  Q_D(qSlicerCIVM_NDDisplayModuleWidget);
   d->setupUi(this);
   this->Superclass::setup();
+
 }
 

@@ -15,14 +15,14 @@
 
 ==============================================================================*/
 
-// .NAME vtkSlicerLoadableModuleTemplateLogic - slicer logic class for volumes manipulation
+// .NAME vtkSlicerCIVM_NDDisplayLogic - slicer logic class for volumes manipulation
 // .SECTION Description
 // This class manages the logic associated with reading, saving,
 // and changing propertied of the volumes
 
 
-#ifndef __vtkSlicerLoadableModuleTemplateLogic_h
-#define __vtkSlicerLoadableModuleTemplateLogic_h
+#ifndef __vtkSlicerCIVM_NDDisplayLogic_h
+#define __vtkSlicerCIVM_NDDisplayLogic_h
 
 // Slicer includes
 #include "vtkSlicerModuleLogic.h"
@@ -32,22 +32,22 @@
 // STD includes
 #include <cstdlib>
 
-#include "vtkSlicerLoadableModuleTemplateModuleLogicExport.h"
+#include "vtkSlicerCIVM_NDDisplayModuleLogicExport.h"
 
 
 /// \ingroup Slicer_QtModules_ExtensionTemplate
-class VTK_SLICER_LOADABLEMODULETEMPLATE_MODULE_LOGIC_EXPORT vtkSlicerLoadableModuleTemplateLogic :
+class VTK_SLICER_CIVM_NDDISPLAY_MODULE_LOGIC_EXPORT vtkSlicerCIVM_NDDisplayLogic :
   public vtkSlicerModuleLogic
 {
 public:
 
-  static vtkSlicerLoadableModuleTemplateLogic *New();
-  vtkTypeMacro(vtkSlicerLoadableModuleTemplateLogic, vtkSlicerModuleLogic);
+  static vtkSlicerCIVM_NDDisplayLogic *New();
+  vtkTypeMacro(vtkSlicerCIVM_NDDisplayLogic, vtkSlicerModuleLogic);
   void PrintSelf(ostream& os, vtkIndent indent);
 
 protected:
-  vtkSlicerLoadableModuleTemplateLogic();
-  virtual ~vtkSlicerLoadableModuleTemplateLogic();
+  vtkSlicerCIVM_NDDisplayLogic();
+  virtual ~vtkSlicerCIVM_NDDisplayLogic();
 
   virtual void SetMRMLSceneInternal(vtkMRMLScene* newScene);
   /// Register MRML Node classes to Scene. Gets called automatically when the MRMLScene is attached to this logic class.
@@ -57,8 +57,8 @@ protected:
   virtual void OnMRMLSceneNodeRemoved(vtkMRMLNode* node);
 private:
 
-  vtkSlicerLoadableModuleTemplateLogic(const vtkSlicerLoadableModuleTemplateLogic&); // Not implemented
-  void operator=(const vtkSlicerLoadableModuleTemplateLogic&);               // Not implemented
+  vtkSlicerCIVM_NDDisplayLogic(const vtkSlicerCIVM_NDDisplayLogic&); // Not implemented
+  void operator=(const vtkSlicerCIVM_NDDisplayLogic&);               // Not implemented
 };
 
 #endif

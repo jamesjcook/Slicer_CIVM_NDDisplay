@@ -18,63 +18,63 @@
 // Qt includes
 #include <QtPlugin>
 
-// LoadableModuleTemplate Logic includes
-#include <vtkSlicerLoadableModuleTemplateLogic.h>
+// CIVM_NDDisplay Logic includes
+#include <vtkSlicerCIVM_NDDisplayLogic.h>
 
-// LoadableModuleTemplate includes
-#include "qSlicerLoadableModuleTemplateModule.h"
-#include "qSlicerLoadableModuleTemplateModuleWidget.h"
+// CIVM_NDDisplay includes
+#include "qSlicerCIVM_NDDisplayModule.h"
+#include "qSlicerCIVM_NDDisplayModuleWidget.h"
 
 //-----------------------------------------------------------------------------
-Q_EXPORT_PLUGIN2(qSlicerLoadableModuleTemplateModule, qSlicerLoadableModuleTemplateModule);
+Q_EXPORT_PLUGIN2(qSlicerCIVM_NDDisplayModule, qSlicerCIVM_NDDisplayModule);
 
 //-----------------------------------------------------------------------------
 /// \ingroup Slicer_QtModules_ExtensionTemplate
-class qSlicerLoadableModuleTemplateModulePrivate
+class qSlicerCIVM_NDDisplayModulePrivate
 {
 public:
-  qSlicerLoadableModuleTemplateModulePrivate();
+  qSlicerCIVM_NDDisplayModulePrivate();
 };
 
 //-----------------------------------------------------------------------------
-// qSlicerLoadableModuleTemplateModulePrivate methods
+// qSlicerCIVM_NDDisplayModulePrivate methods
 
 //-----------------------------------------------------------------------------
-qSlicerLoadableModuleTemplateModulePrivate
-::qSlicerLoadableModuleTemplateModulePrivate()
+qSlicerCIVM_NDDisplayModulePrivate
+::qSlicerCIVM_NDDisplayModulePrivate()
 {
 }
 
 //-----------------------------------------------------------------------------
-// qSlicerLoadableModuleTemplateModule methods
+// qSlicerCIVM_NDDisplayModule methods
 
 //-----------------------------------------------------------------------------
-qSlicerLoadableModuleTemplateModule
-::qSlicerLoadableModuleTemplateModule(QObject* _parent)
+qSlicerCIVM_NDDisplayModule
+::qSlicerCIVM_NDDisplayModule(QObject* _parent)
   : Superclass(_parent)
-  , d_ptr(new qSlicerLoadableModuleTemplateModulePrivate)
+  , d_ptr(new qSlicerCIVM_NDDisplayModulePrivate)
 {
 }
 
 //-----------------------------------------------------------------------------
-qSlicerLoadableModuleTemplateModule::~qSlicerLoadableModuleTemplateModule()
+qSlicerCIVM_NDDisplayModule::~qSlicerCIVM_NDDisplayModule()
 {
 }
 
 //-----------------------------------------------------------------------------
-QString qSlicerLoadableModuleTemplateModule::helpText()const
+QString qSlicerCIVM_NDDisplayModule::helpText()const
 {
   return "This is a loadable module bundled in an extension";
 }
 
 //-----------------------------------------------------------------------------
-QString qSlicerLoadableModuleTemplateModule::acknowledgementText()const
+QString qSlicerCIVM_NDDisplayModule::acknowledgementText()const
 {
   return "This work was was partially funded by NIH grant 3P41RR013218-12S1";
 }
 
 //-----------------------------------------------------------------------------
-QStringList qSlicerLoadableModuleTemplateModule::contributors()const
+QStringList qSlicerCIVM_NDDisplayModule::contributors()const
 {
   QStringList moduleContributors;
   moduleContributors << QString("Jean-Christophe Fillion-Robin (Kitware)");
@@ -82,38 +82,38 @@ QStringList qSlicerLoadableModuleTemplateModule::contributors()const
 }
 
 //-----------------------------------------------------------------------------
-QIcon qSlicerLoadableModuleTemplateModule::icon()const
+QIcon qSlicerCIVM_NDDisplayModule::icon()const
 {
-  return QIcon(":/Icons/LoadableModuleTemplate.png");
+  return QIcon(":/Icons/CIVM_NDDisplay.png");
 }
 
 //-----------------------------------------------------------------------------
-QStringList qSlicerLoadableModuleTemplateModule::categories() const
+QStringList qSlicerCIVM_NDDisplayModule::categories() const
 {
   return QStringList() << "Examples";
 }
 
 //-----------------------------------------------------------------------------
-QStringList qSlicerLoadableModuleTemplateModule::dependencies() const
+QStringList qSlicerCIVM_NDDisplayModule::dependencies() const
 {
   return QStringList();
 }
 
 //-----------------------------------------------------------------------------
-void qSlicerLoadableModuleTemplateModule::setup()
+void qSlicerCIVM_NDDisplayModule::setup()
 {
   this->Superclass::setup();
 }
 
 //-----------------------------------------------------------------------------
-qSlicerAbstractModuleRepresentation * qSlicerLoadableModuleTemplateModule
+qSlicerAbstractModuleRepresentation * qSlicerCIVM_NDDisplayModule
 ::createWidgetRepresentation()
 {
-  return new qSlicerLoadableModuleTemplateModuleWidget;
+  return new qSlicerCIVM_NDDisplayModuleWidget;
 }
 
 //-----------------------------------------------------------------------------
-vtkMRMLAbstractLogic* qSlicerLoadableModuleTemplateModule::createLogic()
+vtkMRMLAbstractLogic* qSlicerCIVM_NDDisplayModule::createLogic()
 {
-  return vtkSlicerLoadableModuleTemplateLogic::New();
+  return vtkSlicerCIVM_NDDisplayLogic::New();
 }
