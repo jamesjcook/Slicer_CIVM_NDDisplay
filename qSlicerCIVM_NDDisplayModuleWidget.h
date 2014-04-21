@@ -21,7 +21,11 @@
 // SlicerQt includes
 #include "qSlicerAbstractModuleWidget.h"
 
-#include "qSlicerCIVM_NDDisplayModuleExport.h"
+//#include "qSlicerCIVM_NDDisplayExport.h"
+//#include "qSlicerCIVM_NDDisplayModuleExport.h" //sucessful in module compile but not in civm_gallerycontrol compile. 
+#include <qSlicerCIVM_NDDisplayModuleExport.h> //sucessful in module compile but not in civm_gallerycontrol compile.
+
+//#include "qSlicerCIVM_NDDisplayModuleWidgetExport.h" // always fails 
 
 class qSlicerCIVM_NDDisplayModuleWidgetPrivate;
 class vtkMRMLNode;

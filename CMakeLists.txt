@@ -1,4 +1,4 @@
-
+#C:\src\CIVM_GalleryControl\CIVM_NDDisplay\CMakeLists.txt
 #-----------------------------------------------------------------------------
 set(MODULE_NAME CIVM_NDDisplay)
 set(MODULE_TITLE ${MODULE_NAME})
@@ -18,6 +18,7 @@ set(MODULE_INCLUDE_DIRECTORIES
   ${CMAKE_CURRENT_BINARY_DIR}/Logic
   ${CMAKE_CURRENT_SOURCE_DIR}/Widgets
   ${CMAKE_CURRENT_BINARY_DIR}/Widgets
+  ${MODULE_NAME}_SOURCE_DIR
   )
 
 set(MODULE_SRCS
@@ -39,6 +40,7 @@ set(MODULE_UI_SRCS
 set(MODULE_TARGET_LIBRARIES
   vtkSlicer${MODULE_NAME}ModuleLogic
   qSlicer${MODULE_NAME}ModuleWidgets
+  qSlicer${MODULE_NAME}Module
   )
 
 set(MODULE_RESOURCES
