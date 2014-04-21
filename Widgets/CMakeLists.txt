@@ -4,7 +4,7 @@ set(KIT ${PROJECT_NAME})
 
 #-----------------------------------------------------------------------------
 add_subdirectory(ThreeD)
-add_subdirectory(FourD)
+#add_subdirectory(FourD)
 #add_subdirectory(FiveD)
 
 set(${KIT}_EXPORT_DIRECTIVE "Q_SLICER_MODULE_${MODULE_NAME_UPPER}_WIDGETS_EXPORT")
@@ -13,20 +13,20 @@ set(${KIT}_INCLUDE_DIRECTORIES
   )
 
 set(${KIT}_SRCS
-  qSlicer${MODULE_NAME}FooBarWidget.cxx
-  qSlicer${MODULE_NAME}FooBarWidget.h
+  qSlicer${MODULE_NAME}BlankWidget.cxx
+  qSlicer${MODULE_NAME}BlankWidget.h
   )
 
 set(${KIT}_MOC_SRCS
-  qSlicer${MODULE_NAME}FooBarWidget.h
+  qSlicer${MODULE_NAME}BlankWidget.h
   )
 
 set(${KIT}_UI_SRCS
-  ../Resources/UI/qSlicer${MODULE_NAME}FooBarWidget.ui
+  ../Resources/UI/qSlicer${MODULE_NAME}BlankWidget.ui
   )
 
 set(${KIT}_RESOURCES
-  ../Resources/UI/qSlicer${MODULE_NAME}FooBarWidget.ui
+  ../Resources/UI/qSlicer${MODULE_NAME}BlankWidget.ui
   )
 
 set(${KIT}_TARGET_LIBRARIES

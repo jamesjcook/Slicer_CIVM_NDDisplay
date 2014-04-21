@@ -21,7 +21,7 @@
 // SlicerQt includes
 #include "qSlicerCIVM_NDDisplayModuleWidget.h"
 #include "ui_qSlicerCIVM_NDDisplayModuleWidget.h"
-#include "qSlicerCIVM_NDDisplayFooBarWidget.h"
+//#include "qSlicerCIVM_NDDisplayFooBarWidget.h"
 
 //-----------------------------------------------------------------------------
 /// \ingroup Slicer_QtModules_ExtensionTemplate

@@ -4,33 +4,35 @@ set(KIT qSlicer${MODULE_NAME}FourDModule)
 
 #-----------------------------------------------------------------------------
 
-# project(qSlicer${MODULE_NAME}ModuleWidgets)
+### project(qSlicer${MODULE_NAME}ModuleWidgets)
+### set(KIT ${PROJECT_NAME})
 
-# set(KIT ${PROJECT_NAME})
-
-set(${KIT}_EXPORT_DIRECTIVE "Q_SLICER_MODULE_${MODULE_NAME_UPPER}_WIDGETS_EXPORT")
+string(TOUPPER ${KIT} KIT_UPPER)
+set(${KIT}_EXPORT_DIRECTIVE "${KIT_UPPER}_WIDGETS_EXPORT")
 
 set(${KIT}_INCLUDE_DIRECTORIES
+#    ${CMAKE_CURRENT_SOURCE_DIR}/Widgets/FourD
+#    ${CMAKE_CURRENT_BINARY_DIR}/Widgets
   )
 
 set(${KIT}_SRCS
 #   qSlicer${MODULE_NAME}FooBarWidget.cxx
 #   qSlicer${MODULE_NAME}FooBarWidget.h
-#    ${KIT}MultiVolRender.cxx
-#    ${KIT}MultiVolRender.h
+    qSlicer${MODULE_NAME}MultiVolRend.cxx
+    qSlicer${MODULE_NAME}MultiVolRend.h
   )
 
-# set(${KIT}_MOC_SRCS
-#   qSlicer${MODULE_NAME}FooBarWidget.h
-#   )
+ set(${KIT}_MOC_SRCS
+   ../qSlicer${MODULE_NAME}BlankWidget.h
+   )
 
-# set(${KIT}_UI_SRCS
-#   ../Resources/UI/qSlicer${MODULE_NAME}FooBarWidget.ui
-#   )
+ set(${KIT}_UI_SRCS
+   ../../Resources/UI/qSlicer${MODULE_NAME}BlankWidget.ui
+   )
 
-# set(${KIT}_RESOURCES
-#   ../Resources/UI/qSlicer${MODULE_NAME}FooBarWidget.ui
-#   )
+ set(${KIT}_RESOURCES
+   ../../Resources/UI/qSlicer${MODULE_NAME}BlankWidget.ui
+   )
 
 set(${KIT}_TARGET_LIBRARIES
   ${KIT}
